@@ -42,12 +42,11 @@ navigator.mediaDevices.getUserMedia({
         // 失敗したら再度実行
         if (code) {
             // openModal(code.data);
+            console.log(code);
             alert(code.data);
         }else{
             alert("QRコードが見つからないぜ");
-            (function setTimeout(){
-                checkImage();
-            }, 200);
+            setTimeout(() => { checkImage() }, 200)
         }
     }
 
