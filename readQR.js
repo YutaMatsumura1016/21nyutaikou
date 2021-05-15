@@ -31,6 +31,10 @@ navigator.mediaDevices
         // Canvasからデータを取得
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
 
+        if(imageData != null){
+            alert("canvasはできてるよ")
+        }
+
         // jsQRに渡す
         const code = jsQR(imageData.data, canvas.width, canvas.height)
 
@@ -41,7 +45,6 @@ navigator.mediaDevices
             alert("読み取りに成功しました")
         } else {
             setTimeout(() => { checkImage() }, 200)
-            alert("読み取りに失敗しました")
         }
     }
 
