@@ -1,4 +1,4 @@
-const video = document.querySelector('.camera')
+const video = document.querySelector('.camera');
 
 navigator.mediaDevices.getUserMedia({
         audio: false,
@@ -16,13 +16,13 @@ navigator.mediaDevices.getUserMedia({
         }
     })
     .catch(function(err) {
-        alert('エラーが発生しました。\nカメラを起動できません。')
+        alert('エラーが発生しました。\nカメラを起動できません。');
     })
 
 
 
-    const canvas = document.querySelector('.canvas')
-    const ctx = canvas.getContext('2d')
+    const canvas = document.querySelector('.canvas');
+    const ctx = canvas.getContext('2d');
 
     function checkImage(){
         // 取得している動画をCanvasに描画
@@ -43,23 +43,27 @@ navigator.mediaDevices.getUserMedia({
         if (code) {
             // openModal(code.data);
             alert(code.data);
-        } else {
+        } else if(code = null){
             // (function setTimeout(){
             //     checkImage();
             // }, 200);
-            alert("QRコード発見失敗")
+            alert("jsQR起動失敗");
+        }else{
+            (function setTimeout(){
+                checkImage();
+            }, 200);
         }
     }
 
 
-    const openModal = function(url) {
-        document.querySelector('#js-result').innerText = url
-        document.querySelector('#js-link').setAttribute('href', url)
-        document.querySelector('#js-modal').classList.add('is-show')
-    }
+    // const openModal = function(url) {
+    //     document.querySelector('#js-result').innerText = url
+    //     document.querySelector('#js-link').setAttribute('href', url)
+    //     document.querySelector('#js-modal').classList.add('is-show')
+    // }
     
-    document.querySelector('#js-modal-close')
-        .addEventListener('click', () => {
-            document.querySelector('#js-modal').classList.remove('is-show')
-            checkImage()
-        })
+    // document.querySelector('#js-modal-close')
+    //     .addEventListener('click', () => {
+    //         document.querySelector('#js-modal').classList.remove('is-show')
+    //         checkImage()
+    //     })
