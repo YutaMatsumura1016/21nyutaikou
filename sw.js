@@ -1,10 +1,7 @@
-const cacheName = 'V1.0.0'; //キャッシュの名づけ
+const cacheName = 'V1.0.1'; //キャッシュの名づけ
 
 const cacheAssets = [ //必要最低限のもの
 	'index.html',
-	'toujitsu.html',
-	'siryou20.html',
-	'siryouKako.html',
 	'style.css'
 ]
 
