@@ -16,12 +16,12 @@ navigator.mediaDevices
         }
     })
     .catch(function(err) {
-        alert('Error!!')
+        alert('エラーが発生しました。\nカメラを起動できません。')
     })
 
 
 
-    const canvas = document.querySelector('#js-canvas')
+    const canvas = document.querySelector('.canvas')
     const ctx = canvas.getContext('2d')
 
     const checkImage = () => {

@@ -11,12 +11,6 @@ html, body {
     font-family: sans-serif;
 }
 
-.readQR {
-    width: 100vw;
-    height: 100%;
-
-}
-
 .camera {
     background-color: #000;
     width: 300;
