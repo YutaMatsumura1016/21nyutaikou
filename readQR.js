@@ -45,7 +45,6 @@ navigator.mediaDevices.getUserMedia({
             console.log(code);
             alert(code.data);
         }else{
-            alert("QRコードが見つからないぜ");
             setTimeout(() => { checkImage() }, 200)
         }
     }
