@@ -49,7 +49,7 @@ navigator.mediaDevices.getUserMedia({
         if (code) {
             // openModal(code.data);
             alert(code.data);
-        } else if(code = null){
+        } else if(code === null){
             // (function setTimeout(){
             //     checkImage();
             // }, 200);
