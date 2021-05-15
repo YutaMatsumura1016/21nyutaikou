@@ -32,7 +32,7 @@ navigator.mediaDevices.getUserMedia({
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         if(imageData != null){
-            alert("canvasはできてるよ1")
+            alert("canvasはできてるよ2")
         }
 
         // jsQRに渡す
@@ -44,9 +44,10 @@ navigator.mediaDevices.getUserMedia({
             // openModal(code.data);
             alert(code.data);
         } else {
-            (function setTimeout(){
-                checkImage();
-            }, 200);
+            // (function setTimeout(){
+            //     checkImage();
+            // }, 200);
+            alert("QRコード発見失敗")
         }
     }
 
