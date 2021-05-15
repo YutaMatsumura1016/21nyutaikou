@@ -38,6 +38,7 @@ navigator.mediaDevices.getUserMedia({
         // jsQRに渡す
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
+        console.log(code.data);
 
         // 失敗したら再度実行
         if (code) {
