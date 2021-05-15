@@ -2,17 +2,17 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body{
     margin: 0;
     padding: 0;
     height: 100%;
     font-family: sans-serif;
 }
 
-.camera {
+.camera{
     background-color: #BD1911;
     width: 70vw;
-    height: auto;
+    height: 50vh;
     position: relative;
     margin-left: 15vw ;
     margin-top: 5%;
