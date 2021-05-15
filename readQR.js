@@ -24,28 +24,29 @@ navigator.mediaDevices.getUserMedia({
     const canvas = document.querySelector('.canvas')
     const ctx = canvas.getContext('2d')
 
-    const checkImage = () => {
+    function checkImage(){
         // 取得している動画をCanvasに描画
-        ctx.drawImage(video, 0, 0, canvas.width, canvas.height)
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
 
         // Canvasからデータを取得
-        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height)
+        const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         if(imageData != null){
             alert("canvasはできてるよ")
         }
 
         // jsQRに渡す
-        const code = jsQR(imageData.data, canvas.width, canvas.height)
+        const code = jsQR(imageData.data, canvas.width, canvas.height);
 
         // QRコードの読み取りに成功したらモーダル開く
         // 失敗したら再度実行
         if (code) {
-            openModal(code.data)
-            alert("読み取りに成功しました")
+            // openModal(code.data);
+            alert(code.data);
         } else {
-            setTimeout(() => { checkImage() }, 200)
-            alert("読み取りに失敗しました")
+            (function setTimeout(){
+                checkImage();
+            }, 200);
         }
     }
 
