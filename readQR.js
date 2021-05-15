@@ -30,7 +30,6 @@ navigator.mediaDevices.getUserMedia({
 
         // Canvasからデータを取得
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
-        alert(imageData);
 
         // if(imageData != null){
         //     alert("canvasはできてるよ3")
@@ -39,6 +38,7 @@ navigator.mediaDevices.getUserMedia({
         // jsQRに渡す
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
+        code = "apple";
 
         if(code != null){
             alert("jsQRは動いてやがる！");
