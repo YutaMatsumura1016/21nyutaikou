@@ -19,5 +19,5 @@ html, body {
 .canvas{
     /* display: none; */
     width: max-content;
-    height: max-content;
+    height: 200%;
 }
