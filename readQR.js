@@ -32,7 +32,7 @@ navigator.mediaDevices.getUserMedia({
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         if(imageData != null){
-            alert("canvasはできてるよ")
+            alert("canvasはできてるよ1")
         }
 
         // jsQRに渡す
