@@ -31,17 +31,17 @@ navigator.mediaDevices.getUserMedia({
         // Canvasからデータを取得
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-        if(imageData != null){
-            alert("canvasはできてるよ3")
-        }
+        // if(imageData != null){
+        //     alert("canvasはできてるよ3")
+        // }
 
         // jsQRに渡す
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
 
-        if(code != null){
-            alert("jsQRは動いてやがる！");
-        }
+        // if(code != null){
+        //     alert("jsQRは動いてやがる！");
+        // }
 
         // 失敗したら再度実行
         if (code) {
