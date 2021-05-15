@@ -1,7 +1,6 @@
-const video  = document.querySelector('.camera')
+const video = document.querySelector('.camera')
 
-navigator.mediaDevices
-    .getUserMedia({
+navigator.mediaDevices.getUserMedia({
         audio: false,
         video: {
             facingMode: {
@@ -10,9 +9,10 @@ navigator.mediaDevices
         }
     })
     .then(function(stream) {
-        video.srcObject = stream
+        video.srcObject = stream;
         video.onloadedmetadata = function(e) {
-            video.play()
+            video.play();
+            checkImage();
         }
     })
     .catch(function(err) {
