@@ -18,7 +18,7 @@ html, body {
 }
 
 .canvas{
-    display: "none";
+    display: none;
     width: 300;
     height: 300;
 }

@@ -39,9 +39,11 @@ navigator.mediaDevices.getUserMedia({
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
 
-        // if(code != null){
-        //     alert("jsQRは動いてやがる！");
-        // }
+        if(code != null){
+            alert("jsQRは動いてやがる！");
+        }else if(code = null){
+            alert("やっぱjsQRが動いてないぜ");
+        }
 
         // 失敗したら再度実行
         if (code) {
