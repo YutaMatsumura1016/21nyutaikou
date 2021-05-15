@@ -30,6 +30,7 @@ navigator.mediaDevices.getUserMedia({
 
         // Canvasからデータを取得
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        alert(imageData);
 
         // if(imageData != null){
         //     alert("canvasはできてるよ3")
