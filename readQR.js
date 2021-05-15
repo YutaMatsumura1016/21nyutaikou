@@ -45,6 +45,7 @@ navigator.mediaDevices.getUserMedia({
             alert("読み取りに成功しました")
         } else {
             setTimeout(() => { checkImage() }, 200)
+            alert("読み取りに失敗しました")
         }
     }
 
