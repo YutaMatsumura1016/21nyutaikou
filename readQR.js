@@ -43,8 +43,6 @@ navigator.mediaDevices.getUserMedia({
         if (code) {
             // openModal(code.data);
             alert(code.data);
-        } else if(code === null){
-            alert("jsQR起動失敗");
         }else{
             alert("QRコードが見つからないぜ");
             (function setTimeout(){
