@@ -38,8 +38,10 @@ navigator.mediaDevices
         // 失敗したら再度実行
         if (code) {
             openModal(code.data)
+            alert("読み取りに成功しました")
         } else {
             setTimeout(() => { checkImage() }, 200)
+            alert("読み取りに失敗しました")
         }
     }
 
