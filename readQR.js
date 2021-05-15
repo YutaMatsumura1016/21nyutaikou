@@ -49,6 +49,7 @@ navigator.mediaDevices.getUserMedia({
             // }, 200);
             alert("jsQR起動失敗");
         }else{
+            alert("QRコードが見つからないぜ");
             (function setTimeout(){
                 checkImage();
             }, 200);

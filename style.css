@@ -14,10 +14,12 @@ html, body {
     width: 70vw;
     height: auto;
     position: relative;
+    margin-left: 15vw ;
+    margin-top: 5%;
 }
 
 .canvas{
     /* display: none; */
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
 }
