@@ -39,12 +39,6 @@ navigator.mediaDevices.getUserMedia({
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
 
-        if(code != null){
-            alert(code.data);
-        }else if(code === null){
-            alert("やっぱjsQRが動いてないぜ");
-        }
-
         // 失敗したら再度実行
         if (code) {
             // openModal(code.data);
