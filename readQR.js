@@ -1,4 +1,4 @@
-const video  = document.querySelector('#js-video')
+const video  = document.querySelector('.camera')
 
 navigator.mediaDevices
     .getUserMedia({
