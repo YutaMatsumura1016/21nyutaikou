@@ -41,7 +41,7 @@ navigator.mediaDevices.getUserMedia({
 
         if(code != null){
             alert("jsQRは動いてやがる！");
-        }else if(code = null){
+        }else if(code === null){
             alert("やっぱjsQRが動いてないぜ");
         }else{
             alert("どういう状況？" + code);
