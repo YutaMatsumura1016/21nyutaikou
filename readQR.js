@@ -32,13 +32,17 @@ navigator.mediaDevices.getUserMedia({
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
         if(imageData != null){
-            alert("canvasはできてるよ2")
+            alert("canvasはできてるよ3")
         }
 
         // jsQRに渡す
-        const code = jsQR(imageData.data, canvas.width, canvas.height);
+        var code = null;
+        code = jsQR(imageData.data, canvas.width, canvas.height);
 
-        // QRコードの読み取りに成功したらモーダル開く
+        if(code != null){
+            alert("jsQRは動いてやがる！");
+        }
+
         // 失敗したら再度実行
         if (code) {
             // openModal(code.data);
