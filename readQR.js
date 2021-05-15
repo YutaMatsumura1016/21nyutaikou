@@ -38,14 +38,11 @@ navigator.mediaDevices.getUserMedia({
         // jsQRに渡す
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
-        code = "apple";
 
         if(code != null){
-            alert("jsQRは動いてやがる！");
+            alert(code.data);
         }else if(code === null){
             alert("やっぱjsQRが動いてないぜ");
-        }else{
-            alert("どういう状況？" + code);
         }
 
         // 失敗したら再度実行
