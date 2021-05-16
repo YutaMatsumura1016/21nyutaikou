@@ -43,6 +43,7 @@ navigator.mediaDevices.getUserMedia({
             var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
             resultPage.location = sentURL;
         }else{
+            alert("失敗！");
             setTimeout(() => { checkImage() }, 200)
         }
     }
