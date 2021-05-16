@@ -52,17 +52,17 @@ navigator.mediaDevices.getUserMedia({
         var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
         resultPage.location = sentURL;
 
-        const url = "https://script.google.com/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec"
-        fetch(url , {
-            method: "GET",
-        }).then(response => response.text())
-        .then(text => {
-            // 取得した値をコンソールに出力
-            console.log(text);
-            // HTML上の必要な箇所に値を設定します。
-            const targetID = "console";
-            document.getElementById(targetID).innerText = text;
-        });
+        // const url = "https://script.google.com/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec"
+        // fetch(url , {
+        //     method: "GET",
+        // }).then(response => response.text())
+        // .then(text => {
+        //     // 取得した値をコンソールに出力
+        //     console.log(text);
+        //     // HTML上の必要な箇所に値を設定します。
+        //     const targetID = "console";
+        //     document.getElementById(targetID).innerText = text;
+        // });
 
         checkImage();
     }
