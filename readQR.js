@@ -37,11 +37,12 @@ navigator.mediaDevices.getUserMedia({
         code = jsQR(imageData.data, canvas.width, canvas.height);
 
         // 失敗したら再度実行
-        if (code) {
+        if(code){
             readCode = code.data;
             sendImage();     
         }else{
-            setTimeout(() => { checkImage() }, 200)
+            setTimeout(() => {
+                 checkImage() }, 200)
         }
     }
 
