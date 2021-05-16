@@ -19,17 +19,14 @@ html, body{
 }
 
 .canvas{
+    display: none;
     width: auto;
     height: auto;
-    /* 
-     */
-    /* width: 100%;
-    height: 100%; */
 }
 
 
 .resultPage{
-    width: 100%;
+    width: 100vh;
     height: 50vh;
     margin-top: 50vh;
 }

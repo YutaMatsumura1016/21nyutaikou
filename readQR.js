@@ -38,7 +38,6 @@ navigator.mediaDevices.getUserMedia({
 
         // 失敗したら再度実行
         if (code) {
-            alert(code.data);
             readCode = code.data;
             sendImage();     
         }else{
@@ -47,7 +46,6 @@ navigator.mediaDevices.getUserMedia({
     }
 
     function sendImage(){
-        alert(readCode);
         var idmString = readCode.substr(0, 16);
         var gate = readCode.substr(17,)
         var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
