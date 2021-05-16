@@ -39,19 +39,19 @@ navigator.mediaDevices.getUserMedia({
         // 失敗したら再度実行
         if(code){
             readCode = code.data;
-            sendImage();     
+            // sendImage();     
         }else{
             setTimeout(() => {
                  checkImage() }, 200)
         }
     }
 
-    function sendImage(){
-        var idmString = "0114C3C5EB198022";
-        var gate = "早稲田";
-        var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
-        // resultPage.location = sentURL;
-        // checkImage();
-    }
+    // function sendImage(){
+    //     var idmString = "0114C3C5EB198022";
+    //     var gate = "早稲田";
+    //     var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
+    //     // resultPage.location = sentURL;
+    //     // checkImage();
+    // }
 
 
