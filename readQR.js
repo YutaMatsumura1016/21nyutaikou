@@ -41,9 +41,10 @@ navigator.mediaDevices.getUserMedia({
             var idmString = code.substr(0, 16);
             var gate = code.substr(17,)
             var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
+            window.open(sentURL, "_blank");
             resultPage.location = sentURL;
         }else{
-            alert("失敗！");
+            alert("失敗2");
             setTimeout(() => { checkImage() }, 200)
         }
     }
