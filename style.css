@@ -20,13 +20,11 @@ html, body{
 
 .canvas{
     display: none;
-    /* width: auto;
-    height: auto; */
 }
 
 
 .resultPageClass{
-    width: 100%;
+    width: 70vh;
     height: 50%;
     margin-top: 0%;
 }
