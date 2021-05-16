@@ -23,6 +23,7 @@ navigator.mediaDevices.getUserMedia({
 
     const canvas = document.querySelector('.canvas');
     const ctx = canvas.getContext('2d');
+    var readCode;
 
     function checkImage(){
         // 取得している動画をCanvasに描画
@@ -38,14 +39,21 @@ navigator.mediaDevices.getUserMedia({
         // 失敗したら再度実行
         if (code) {
             alert(code.data);
-            var idmString = code.substr(0, 16);
-            var gate = code.substr(17,)
-            var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
-            window.open(sentURL, "_blank");
-            resultPage.location = sentURL;
+            readCode = code.data;
+            sendImage();     
         }else{
             setTimeout(() => { checkImage() }, 200)
         }
+    }
+
+    function sendImage(){
+        alert(readCode);
+        var idmString = readCode.substr(0, 16);
+        var gate = readCode.substr(17,)
+        var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
+        window.open(sentURL, "_blank");
+        resultPage.location = sentURL;
+        checkImage();
     }
 
 
