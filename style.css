@@ -9,3 +9,24 @@ html, body{
     font-family: sans-serif;
 }
 
+.camera{
+    background-color: #666666;
+    width: 70%;
+    height: 40%;
+    /* position: relative; */
+    margin-top: 0;
+    margin-left: 15%;
+}
+
+.canvas{
+    display: none;
+}
+
+
+.resultPageClass{
+    width: 69.8%;
+    height: 50%;
+    margin-top: 0%;
+    margin-left: 15%;
+    border: none;
+}
