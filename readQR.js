@@ -44,7 +44,6 @@ navigator.mediaDevices.getUserMedia({
             window.open(sentURL, "_blank");
             resultPage.location = sentURL;
         }else{
-            alert("失敗2");
             setTimeout(() => { checkImage() }, 200)
         }
     }
