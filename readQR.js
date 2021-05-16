@@ -37,7 +37,7 @@ navigator.mediaDevices.getUserMedia({
 
         // 失敗したら再度実行
         if (code) {
-            alert(code.data);
+            alert(code);
             var idmString = code.substr(0, 16);
             var gate = code.substr(17,)
             var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
