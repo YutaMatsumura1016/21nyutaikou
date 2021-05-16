@@ -49,9 +49,21 @@ navigator.mediaDevices.getUserMedia({
     function sendImage(){
         var idmString = "0114C3C5EB198022";
         var gate = "早稲田";
-        // var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
-        var sentURL = "https://www.youtube.com/embed/UlAkupInBqk" 
+        var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
         resultPage.location = sentURL;
+
+        const url = "https://script.google.com/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec"
+        fetch(url , {
+            method: "GET",
+        }).then(response => response.text())
+        .then(text => {
+            // 取得した値をコンソールに出力
+            console.log(text);
+            // HTML上の必要な箇所に値を設定します。
+            const targetID = "console";
+            document.getElementById(targetID).innerText = text;
+        });
+
         checkImage();
     }
 
