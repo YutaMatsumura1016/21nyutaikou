@@ -31,33 +31,20 @@ navigator.mediaDevices.getUserMedia({
         // Canvasからデータを取得
         const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
 
-        // if(imageData != null){
-        //     alert("canvasはできてるよ3")
-        // }
-
         // jsQRに渡す
         var code = null;
         code = jsQR(imageData.data, canvas.width, canvas.height);
 
         // 失敗したら再度実行
         if (code) {
-            // openModal(code.data);
-            console.log(code);
+            var idmString = code.substr(0, 16);
+            var gate = code.substr(17,);
+            var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
             alert(code.data);
+            resultPage.location = sentURL;
         }else{
             setTimeout(() => { checkImage() }, 200)
         }
     }
 
 
-    // const openModal = function(url) {
-    //     document.querySelector('#js-result').innerText = url
-    //     document.querySelector('#js-link').setAttribute('href', url)
-    //     document.querySelector('#js-modal').classList.add('is-show')
-    // }
-    
-    // document.querySelector('#js-modal-close')
-    //     .addEventListener('click', () => {
-    //         document.querySelector('#js-modal').classList.remove('is-show')
-    //         checkImage()
-    //     })
