@@ -48,8 +48,9 @@ navigator.mediaDevices.getUserMedia({
 
     function sendImage(){
         var idmString = "0114C3C5EB198022";
-        var gate = "Waseda";
-        var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
+        var gate = "早稲田";
+        // var sentURL = "https://script.google.com/a/wasedasai.net/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec?idm=" + idmString + "&&gate=" + gate;
+        var sentURL = "https://www.youtube.com/embed/UlAkupInBqk" 
         resultPage.location = sentURL;
         checkImage();
     }
