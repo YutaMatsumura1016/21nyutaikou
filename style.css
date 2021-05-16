@@ -11,11 +11,11 @@ html, body{
 
 .camera{
     background-color: #BD1911;
-    width: 70vw;
-    height: 50vh;
-    position: relative;
-    margin-left: 15vw ;
-    margin-top: 5%;
+    width: 70%;
+    height: 40%;
+    /* position: relative; */
+    margin-top: 0;
+    margin-left: 15%;
 }
 
 .canvas{
@@ -24,7 +24,9 @@ html, body{
 
 
 .resultPageClass{
-    width: 70vh;
+    width: 69.8%;
     height: 50%;
     margin-top: 0%;
+    margin-left: 15%;
+    border: none;
 }
