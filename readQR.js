@@ -72,7 +72,7 @@ navigator.mediaDevices.getUserMedia({
 
 
         const url = "https://script.google.com/macros/s/AKfycbw9BMWL3BLRhB8ZlIs32scTBWceP0TYy28wnWtBD2btOatmNiiw/exec"
-        fetch(url , {
+        fetch(sentURL , {
             method: "GET",
         }).then(response => response.text())
         .then(text => {
